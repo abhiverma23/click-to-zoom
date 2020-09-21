@@ -17,7 +17,10 @@ How to use?
 * Save and visit your site to view image.
 
 Example:
-* I have used it in my blog [TechCheck | Creawte AWS VPC](https://techcheck.vabhishek.com/aws-vpc/vpc).
+* I have used it in my blog [TechCheck | Create AWS VPC](https://techcheck.vabhishek.com/aws-vpc/vpc).
 
 Want to contribute?
 * Fork this code and contribute your changes in [development](https://github.com/abhiverma23/click-to-zoom/tree/development) branch.
+
+Whats out?
+* Check out [release page](https://github.com/abhiverma23/click-to-zoom/releases) to get what feature and bug fixes are done.

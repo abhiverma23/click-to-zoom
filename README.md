@@ -18,3 +18,6 @@ How to use?
 
 Example:
 * I have used it in my blog [TechCheck | Creawte AWS VPC](https://techcheck.vabhishek.com/aws-vpc/vpc).
+
+Want to contribute?
+* Fork this code and contribute your changes in [development](https://github.com/abhiverma23/click-to-zoom/tree/development) branch.

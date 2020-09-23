@@ -2,7 +2,8 @@
 Bludit plugin to enable image zoom on click. Click to zoom image.
 
 * Hover over image.
-* Click on image to see image in full screen.
+* Click on an image to see image in full screen.
+* Click on close button OR double-click in full screen to close full screen.
 
 How to install?
 * Download the [->zip file<-](https://github.com/abhiverma23/click-to-zoom/archive/master.zip).
@@ -22,5 +23,5 @@ Example:
 Want to contribute?
 * Fork this code and contribute your changes in [development](https://github.com/abhiverma23/click-to-zoom/tree/development) branch.
 
-Whats out?
-* Check out [release page](https://github.com/abhiverma23/click-to-zoom/releases) to get what feature and bug fixes are done.
+What's out?
+* Check out [release page](https://github.com/abhiverma23/click-to-zoom/releases) to get what features are release and bugs are fix.

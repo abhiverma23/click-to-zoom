@@ -1,10 +1,10 @@
-#myImg {
+.click-to-zoom-img {
     border-radius: 5px;
-    cursor: pointer;
+    cursor: zoom-in;
     transition: 0.3s;
 }
 
-.click-to-zoom-img:hover {opacity: 0.7;}
+.click-to-zoom-img:hover {opacity: 0.7; border: #808080 groove thin;}
 
 /* The Modal (background) */
 .click-to-zoom-modal {
@@ -19,6 +19,13 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    -ms-overflow-style: none;  /* Hide scroll bar for IE and Edge */
+    scrollbar-width: none;  /* Hide scroll bar for Firefox */
+}
+
+/* Hide scroll bar for Chrome, Safari and Opera*/
+.click-to-zoom-modal::-webkit-scrollbar {
+    display: none;
 }
 
 /* Modal Content (image) */
@@ -26,7 +33,7 @@
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 1300px;
 }
 
 /* Caption of Modal Image */

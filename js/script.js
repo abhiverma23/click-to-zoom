@@ -12,6 +12,9 @@ if (modalImg == null) {
         '    <img class="click-to-zoom-modal-content" id="click-to-zoom-img">\n' +
         '    <div id="click-to-zoom-caption"></div>';
     rootNode.body.appendChild(div);
+    div.ondblclick = function () {
+        modal.style.display = "none";
+    }
     modalImg = document.getElementById("click-to-zoom-img");
 }
 // Get the modal
@@ -22,7 +25,7 @@ var captionText = document.getElementById("click-to-zoom-caption");
 
 for (img in imgs) {
     if (typeof imgs[img].hasAttribute === 'function' && imgs[img].hasAttribute('click-to-zoom')) {
-        if(imgs[img].getAttribute('class') == null ||  imgs[img].getAttribute('class') == '') {
+        if (imgs[img].getAttribute('class') == null || imgs[img].getAttribute('class') == '') {
             imgs[img].setAttribute('class', "click-to-zoom-img");
         }
         imgs[img].onclick = function () {
@@ -37,6 +40,6 @@ for (img in imgs) {
 var span = document.getElementsByClassName("click-to-zoom-close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 }

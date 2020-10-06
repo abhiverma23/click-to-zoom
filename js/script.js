@@ -1,21 +1,17 @@
 class ClickToZoom {
-    static isAttributeSearch = true;
-    static attribute = 'click-to-zoom';
-    static isClassSearch = false;
-    static class = null;
     static modal;
     static modalImg;
     static captionText;
     constructor(configuration) {
-        ClickToZoom.isAttributeSearch = configuration.attribute != null ? true : false;
-        ClickToZoom.attribute = configuration.attribute;
-        ClickToZoom.isClassSearch = configuration.class != null && configuration.attribute == null ? true : false;
-        ClickToZoom.class = configuration.class;
+        this.isAttributeSearch = configuration == null || configuration.attribute != null || configuration.class == null ? true : false;
+        this.attribute = configuration != null && configuration.attribute != null ? configuration.attribute : 'click-to-zoom';
+        this.isClassSearch = !this.isAttributeSearch;
+        this.class = configuration !=null ? configuration.class : null;
 
         document.addEventListener('DOMContentLoaded', ClickToZoom.init);
     }
 
-    static init() {
+    init() {
 
         // Get the image and insert it inside the modal - use its "alt" text as a caption
         const imgs = document.getElementsByTagName("img");
@@ -44,7 +40,7 @@ class ClickToZoom {
         ClickToZoom.captionText = document.getElementById("click-to-zoom-caption");
 
         for (let img in imgs) {
-            if (typeof imgs[img].hasAttribute === 'function' && imgs[img].hasAttribute('click-to-zoom')) {
+            if (typeof imgs[img].hasAttribute === 'function' && this.isAttributeSearch && imgs[img].hasAttribute(this.attribute)) {
                 if (imgs[img].getAttribute('class') == null || imgs[img].getAttribute('class') == '') {
                     imgs[img].setAttribute('class', "click-to-zoom-img");
                 }

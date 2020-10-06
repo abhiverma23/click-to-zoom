@@ -13,10 +13,11 @@ class pluginClickToZoom extends Plugin
 
         // Fields and default values for the database of this plugin
         $this->dbFields = array(
-            'label' => $L->g('Click To Zoom'),
-            'enabled' => true,
-            'enableForAllExcept' => '',
-            'disableForAllExcept' => ''
+            'enable' => true,
+            'provider' => 1, // Default => 1, zooming => 2
+            'enableFor' => 1, // Attribute => 1, Class => 2
+            'enableForAttribute' => 'click-to-zoom',
+            'zoomingConfiguration' => ''
         );
     }
 

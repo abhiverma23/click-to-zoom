@@ -7,8 +7,6 @@ class ClickToZoom {
         this.attribute = configuration != null && configuration.attribute != null ? configuration.attribute : 'click-to-zoom';
         this.isClassSearch = !this.isAttributeSearch;
         this.class = configuration !=null ? configuration.class : null;
-
-        document.addEventListener('DOMContentLoaded', ClickToZoom.init);
     }
 
     init() {
